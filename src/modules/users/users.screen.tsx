@@ -1,7 +1,12 @@
-import React, {useId} from 'react';
-import {ScrollView} from 'react-native';
+import React from 'react';
+import {Alert, Button, ScrollView} from 'react-native';
+// Namespace
 import {Routes} from '../../navigation';
+// Components
 import {ListItem} from './components/list-item';
+// Hooks
+import {useAppDispatch, useAppSelector} from '../../store/hooks';
+import {deleteUser} from '../../store/slices/users-slices.ts';
 
 interface PropsT extends StackRouting.ScreenProps<Routes.UserDetails> {}
 
@@ -9,20 +14,30 @@ interface PropsT extends StackRouting.ScreenProps<Routes.UserDetails> {}
  * 🔸 Users Screen
  */
 const UsersScreen: React.FC<PropsT> = ({navigation: {navigate}}) => {
-  const [users, setUsers] = React.useState<User.Details[]>([
-    {
-      id: useId(),
-      name: 'Viktor',
-      email: 'v.p.kurochka@gmail.com',
-      role: 'Developer',
+  const dispatch = useAppDispatch();
+  const {users} = useAppSelector(state => state.users);
+  console.log('users ', users);
+
+  const handleOpenAddUserForm = React.useCallback(() => {
+    navigate({
+      name: Routes.UserDetails,
+      params: {user: {id: '', name: '', email: '', role: ''}},
+    });
+  }, [navigate]);
+
+  const handleDeleteUser = React.useCallback(
+    (id: string) => {
+      dispatch(deleteUser(id));
     },
-    {
-      id: useId(),
-      name: 'Yukon',
-      email: 'yukon@gmail.com',
-      role: 'Manager',
-    },
-  ]);
+    [dispatch],
+  );
+
+  const handleLongPress = (id: string) => {
+    Alert.alert('Delete User', 'Are you sure you want to delete this user?', [
+      {text: 'Cancel', onPress: () => console.log('Canceled')},
+      {text: 'Delete', onPress: () => handleDeleteUser(id)},
+    ]);
+  };
 
   // // Components
   // const renderItem = React.useCallback(
@@ -52,12 +67,14 @@ const UsersScreen: React.FC<PropsT> = ({navigation: {navigate}}) => {
             onPress={() => {
               navigate({
                 name: Routes.UserDetails,
-                params: user,
+                params: {user: user},
               });
             }}
+            onLongPress={() => handleLongPress(user.id)}
           />
         );
       })}
+      <Button title="Add User" onPress={handleOpenAddUserForm} />
     </ScrollView>
   );
 };

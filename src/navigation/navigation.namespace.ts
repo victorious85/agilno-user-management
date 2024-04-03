@@ -3,5 +3,5 @@ export enum Routes {
   UsersStack = 'UsersStack',
   Users = 'Users',
   UserDetails = 'UserDetails',
-  Contacts = 'Contacts',
+  Settings = 'Settings',
 }

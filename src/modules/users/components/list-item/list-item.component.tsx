@@ -8,13 +8,23 @@ interface PropsT {
   email: string;
   role: string;
   onPress: () => void;
+  onLongPress: () => void;
 }
 
 /**
  * 🔸 List Item
  */
-const ListItemComponent: React.FC<PropsT> = ({name, email, role, onPress}) => (
-  <TouchableOpacity style={Styles.container} onPress={onPress}>
+const ListItemComponent: React.FC<PropsT> = ({
+  name,
+  email,
+  role,
+  onPress,
+  onLongPress,
+}) => (
+  <TouchableOpacity
+    style={Styles.container}
+    onPress={onPress}
+    onLongPress={onLongPress}>
     <View style={Styles.column}>
       <Text style={Styles.name}>{name}</Text>
       <Text style={Styles.email}>{email}</Text>

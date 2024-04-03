@@ -4,7 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 // Screens
 import UserStack from '../routes/user-stack.tsx';
-import {Contacts} from '../../modules/contacts';
+import {Settings} from '../../modules/settings';
 import {useMainTabsRoutes} from './main-tabs.namespace.ts';
 
 const {Navigator, Screen} =
@@ -44,11 +44,11 @@ const MainTabNavigator: React.FC = () => {
         }}
       />
       <Screen
-        name={Routes.Contacts}
-        component={Contacts}
+        name={Routes.Settings}
+        component={Settings}
         options={{
           headerShown: true,
-          tabBarLabel: 'Contacts',
+          tabBarLabel: 'Settings',
         }}
       />
       {/*{Object.entries(routes).map(([screenName, {component, options = {}}]) => (*/}

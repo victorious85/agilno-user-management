@@ -20,7 +20,6 @@ const Styles = StyleSheet.create({
   email: {
     fontSize: 14,
     color: '#555',
-    marginRight: 5,
   },
   role: {
     fontSize: 12,

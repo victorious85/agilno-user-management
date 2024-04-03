@@ -1,7 +1,7 @@
 import {Routes} from '../navigation.namespace';
 //Namespace
 import {useUsersOptions} from '../../modules/users/users.screen.tsx';
-import {useContactsOptions} from '../../modules/contacts/contacts.screen.tsx';
+import {useSettingsOptions} from '../../modules/settings/setings.screen.tsx';
 
 /* ====================================
  *    🔰 MAIN TABS SCREEN ROUTES
@@ -15,8 +15,5 @@ type RoutesType = RouteStack.BottomTabScreenRoutes<MainTabsRouting.ParamList>;
  */
 export const useMainTabsRoutes = (): RoutesType => ({
   [Routes.Users]: useUsersOptions(),
-  [Routes.Contacts]: useContactsOptions(),
-  // [Routes.Leads]: useLeadsScreenOptions(),
-  // [Routes.Contacts]: useLoansScreenOptions(),
-  // [Routes.Profiles]: useContactsScreenOptions(),
+  [Routes.Settings]: useSettingsOptions(),
 });

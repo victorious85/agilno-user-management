@@ -1,10 +1,10 @@
 import {Routes} from '../../navigation';
 
 declare global {
-  namespace ContactsRouting {
+  namespace SettingsRouting {
     // Tab screen Param List
     type TabParamList = {
-      [Routes.Contacts]: undefined;
+      [Routes.Settings]: undefined;
     };
   }
 }

@@ -1,34 +1,18 @@
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {StyleSheet} from 'react-native';
+import 'react-native-get-random-values';
+// Components
+import {AppProviders} from './providers/app-providers';
 // Main
 import Main from './main';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+/**
+ * Core project component
+ */
 
-function App(): React.JSX.Element {
-  return <Main />;
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+const App = () => (
+  <AppProviders>
+    <Main />
+  </AppProviders>
+);
 
 export default App;
