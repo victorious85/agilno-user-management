@@ -1,9 +1,9 @@
 import React from 'react';
 import {Text, TextInput, View} from 'react-native';
 // Constants
-import {FieldType} from '../user-details.constants.ts';
+import {FieldType, KeyboardTypes} from '../form/form.constants.ts';
 // Styles
-import Styles from './gorm-input.styles.ts';
+import Styles from './form-input.styles.ts';
 
 interface PropsT {
   type: FieldType;
@@ -31,6 +31,8 @@ const FormInputComponent: React.FC<PropsT> = ({
         defaultValue={defaultValue}
         onChangeText={text => handleChange(type, text)}
         placeholder={placeholder}
+        keyboardType={KeyboardTypes[type]}
+        {...(type === FieldType.Email && {autoCapitalize: 'none'})}
       />
       {error && <Text style={Styles.inputError}>{error}</Text>}
     </View>

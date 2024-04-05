@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
-import {Button, Text, View} from 'react-native';
+import React, {useState, useCallback} from 'react';
+import {View} from 'react-native';
+// Namespace
 import {Routes} from '../../navigation';
+// Constants
+import {TITLE} from './user-details.constants.tsx';
 // Components
-import {Form} from './components/form';
+import {Form, Profile} from './components';
 // Styles
 import Styles from './user-details.styles.ts';
 
@@ -15,21 +18,14 @@ const UserDetailsScreen: React.FC<PropsT> = ({route}) => {
   const {user} = route?.params;
   const [isViewMode, setIsViewMode] = useState(!!user?.id);
 
-  const handleEdit = () => {
+  const handleEdit = useCallback(() => {
     setIsViewMode(false);
-  };
+  }, [setIsViewMode]);
 
   return (
-    <View>
+    <View style={Styles.container}>
       {isViewMode ? (
-        <>
-          <View style={Styles.column}>
-            <Text style={Styles.name}>{user?.name}</Text>
-            <Text style={Styles.email}>{user?.email}</Text>
-            <Text style={Styles.role}>{user?.role}</Text>
-          </View>
-          <Button title="Edit" onPress={handleEdit} />
-        </>
+        <Profile user={user} openForm={handleEdit} />
       ) : (
         <Form user={user} />
       )}
@@ -40,7 +36,7 @@ const UserDetailsScreen: React.FC<PropsT> = ({route}) => {
 export const useUserDetailsScreenOptions = (): RouteStack.ScreenConfigs => ({
   component: UserDetailsScreen,
   options: {
-    headerTitle: 'User Details',
+    headerTitle: TITLE,
     headerShown: true,
     headerBackTitleVisible: false,
   },

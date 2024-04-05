@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 // Screens
-import Stack from './navigation/routes/routes.tsx';
+import {TabNavigator} from './navigation/main-tabs';
 
 /**
  * 🔸 Main Project Entry
@@ -9,7 +9,7 @@ import Stack from './navigation/routes/routes.tsx';
 const Main = () => {
   return (
     <NavigationContainer>
-      <Stack />
+      <TabNavigator />
     </NavigationContainer>
   );
 };

@@ -3,8 +3,6 @@ import {
   NavigationProp as NativeNavigationProp,
   RouteProp as NativeRouteProp,
 } from '@react-navigation/core/src/types';
-// Namespace
-import {Routes} from '../navigation.namespace';
 
 declare global {
   /**

@@ -12,7 +12,7 @@ interface PropsT {
 }
 
 /**
- * 🔸 List Item
+ * 🔸 List Item Component
  */
 const ListItemComponent: React.FC<PropsT> = ({
   name,
@@ -25,7 +25,7 @@ const ListItemComponent: React.FC<PropsT> = ({
     style={Styles.container}
     onPress={onPress}
     onLongPress={onLongPress}>
-    <View style={Styles.column}>
+    <View>
       <Text style={Styles.name}>{name}</Text>
       <Text style={Styles.email}>{email}</Text>
       <Text style={Styles.role}>{role}</Text>

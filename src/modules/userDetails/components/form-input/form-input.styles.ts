@@ -10,7 +10,7 @@ const Styles = StyleSheet.create({
     fontSize: 18,
     borderWidth: 1,
     borderColor: 'gray',
-    paddingHorizontal: 10, // Add padding for better appearance
+    paddingHorizontal: 10,
   },
   inputError: {
     color: 'red',

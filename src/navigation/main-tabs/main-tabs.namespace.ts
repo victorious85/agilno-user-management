@@ -1,7 +1,8 @@
-import {Routes} from '../navigation.namespace';
 //Namespace
-import {useUsersOptions} from '../../modules/users/users.screen.tsx';
-import {useSettingsOptions} from '../../modules/settings/setings.screen.tsx';
+import {Routes} from '../navigation.namespace';
+//Screen Options
+import {useSettingsOptions} from '../../modules/settings';
+import {useUserStackOptions} from '../user-stack';
 
 /* ====================================
  *    🔰 MAIN TABS SCREEN ROUTES
@@ -13,7 +14,8 @@ type RoutesType = RouteStack.BottomTabScreenRoutes<MainTabsRouting.ParamList>;
  * component
  * options
  */
+
 export const useMainTabsRoutes = (): RoutesType => ({
-  [Routes.Users]: useUsersOptions(),
+  [Routes.UsersStack]: useUserStackOptions(),
   [Routes.Settings]: useSettingsOptions(),
 });

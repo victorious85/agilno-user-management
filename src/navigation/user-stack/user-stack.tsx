@@ -1,13 +1,11 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-// Namespace
-import {Routes} from '../navigation.namespace';
-
 // Screens
-import {useStackRoutes} from './routes.namespace.ts';
+import {useStackRoutes} from './user-stack.namespace.ts';
+import {USER_SCREEN_TITLE} from './user-stack.constants.ts';
 
 /* ====================================
- *   🔰 Stack Navigator
+ *   🔰 User Stack Navigator
  ==================================== */
 
 const {Navigator, Screen} =
@@ -28,6 +26,17 @@ const UserStack: React.FC = () => {
       ))}
     </Navigator>
   );
+};
+
+export const useUserStackOptions = (): RouteStack.BottomTabScreenConfigs => {
+  return {
+    component: UserStack,
+    options: {
+      headerShown: false,
+      title: USER_SCREEN_TITLE,
+      tabBarLabel: USER_SCREEN_TITLE,
+    },
+  };
 };
 
 export default UserStack;

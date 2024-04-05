@@ -2,22 +2,21 @@ import {StyleSheet} from 'react-native';
 
 const Styles = StyleSheet.create({
   container: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    flex: 1,
   },
   name: {
-    fontSize: 18,
+    fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 4,
+    marginBottom: 15,
   },
   email: {
-    fontSize: 14,
+    fontSize: 24,
+    marginBottom: 15,
     color: '#555',
-    marginBottom: 4,
   },
   role: {
-    fontSize: 12,
+    fontSize: 22,
+    marginBottom: 30,
     color: '#888',
   },
 });

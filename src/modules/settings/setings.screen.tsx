@@ -1,11 +1,14 @@
 import React from 'react';
 import {View} from 'react-native';
+// Namespace
 import {Routes} from '../../navigation';
+// Constants
+import {TITLE} from './setings.constants.ts';
 
 interface PropsT extends StackRouting.ScreenProps<Routes.Settings> {}
 
 /**
- * 🔸 SettingsScreen Screen
+ * 🔸 Settings Screen
  */
 const SettingsScreen: React.FC<PropsT> = () => <View></View>;
 
@@ -13,8 +16,8 @@ export const useSettingsOptions = (): RouteStack.BottomTabScreenConfigs => {
   return {
     component: SettingsScreen,
     options: {
-      title: 'Settings',
-      tabBarLabel: 'Settings',
+      title: TITLE,
+      tabBarLabel: TITLE,
     },
   };
 };

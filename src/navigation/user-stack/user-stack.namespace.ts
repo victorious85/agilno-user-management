@@ -1,19 +1,19 @@
 // Namespace
-import {Routes} from '../navigation.namespace';
+import {Routes} from '../navigation.namespace.ts';
 // Screen Options
-import {useUserDetailsScreenOptions} from '../../modules/userDetails/user-details.screen.tsx';
-import {useUsersOptions} from '../../modules/users/users.screen.tsx';
+import {useUserDetailsScreenOptions} from '../../modules/userDetails';
+import {useUsersScreenOptions} from '../../modules/users';
 
 /* ====================================
- *      🔰 SCREEN ROUTES
+ *      🔰 USER STACK ROUTES
  ==================================== */
 
 type StackRoutesType = RouteStack.ScreenRoutes<StackRouting.ParamList>;
 
 /**
- * 🔸 Authorized Routes
+ * 🔸 User Stack Routes
  */
 export const useStackRoutes = (): StackRoutesType => ({
-  [Routes.Users]: useUsersOptions(),
+  [Routes.Users]: useUsersScreenOptions(),
   [Routes.UserDetails]: useUserDetailsScreenOptions(),
 });

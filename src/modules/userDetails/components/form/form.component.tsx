@@ -2,16 +2,19 @@ import React, {useCallback, useRef, useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
 import {Button} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-// Hooks
-import {useAppDispatch} from '../../../../store/hooks';
+// Utils
+import {useAppDispatch, useAppSelector} from '../../../../store/hooks';
+import {errorMessage, existingUser, validators} from './form.utils.ts';
+import {showErrorAlert} from '../../../../utils';
+// Store
 import {addUser, updateUser} from '../../../../store/slices/users-slices.ts';
-import {validators} from './form.utils.ts';
 // Constants
 import {
   Placeholders,
   FieldType,
   FormErrors,
   FormFields,
+  ERROR_TITLE,
 } from './form.constants.ts';
 // Components
 import {FormInput} from '../form-input';
@@ -19,11 +22,14 @@ import {FormInput} from '../form-input';
 interface PropsT {
   user: User.Details;
 }
+
 /**
  * 🔸 Form Component
  */
 const FormComponent: React.FC<PropsT> = ({user}) => {
   const {goBack} = useNavigation<StackRouting.NavigationProp>();
+  const {users} = useAppSelector(state => state.users);
+  console.log('FormComponent users ', users);
 
   const dispatch = useAppDispatch(); // Get the dispatch function from react-redux
   const [errors, setErrors] = useState<FormErrors>({});
@@ -56,12 +62,18 @@ const FormComponent: React.FC<PropsT> = ({user}) => {
     if (!isFormValid(editedUserRef.current)) {
       return;
     }
+
+    if (existingUser(users, editedUserRef.current.email)) {
+      return showErrorAlert({
+        title: ERROR_TITLE,
+        message: errorMessage(editedUserRef.current.email),
+      });
+    }
+
     dispatch(
       addUser({
+        ...editedUserRef.current,
         id: uuidv4(),
-        name: editedUserRef.current?.name,
-        role: editedUserRef.current?.role,
-        email: editedUserRef.current?.email,
       }),
     );
     goBack();

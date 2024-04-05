@@ -1,3 +1,4 @@
+// Namespace
 import {Routes} from '../../navigation';
 
 declare global {

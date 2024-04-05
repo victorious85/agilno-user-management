@@ -1,17 +1,5 @@
 // Constants
-import {FieldType} from './form.constants.ts';
-
-export interface FormErrors {
-  [FieldType.NAME]?: string;
-  [FieldType.EMAIL]?: string;
-  [FieldType.ROLE]?: string;
-}
-
-const ErrorText = {
-  [FieldType.NAME]: 'Name must be at least 2 characters',
-  [FieldType.EMAIL]: 'Please enter a valid email address',
-  [FieldType.ROLE]: 'Role must be at least 2 characters',
-};
+import {FieldType, ErrorText} from './form.constants.ts';
 
 const isValidEmail = (email: string): boolean =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -23,7 +11,6 @@ const fieldValidationError = (
   if (!value || value.length < 2) {
     return ErrorText[type];
   }
-  return undefined;
 };
 
 const emailValidationError = (
@@ -33,11 +20,16 @@ const emailValidationError = (
   if (!value || !isValidEmail(value)) {
     return ErrorText[type];
   }
-  return undefined;
 };
 
 export const validators = {
-  [FieldType.NAME]: fieldValidationError,
-  [FieldType.EMAIL]: emailValidationError,
-  [FieldType.ROLE]: fieldValidationError,
+  [FieldType.Name]: fieldValidationError,
+  [FieldType.Email]: emailValidationError,
+  [FieldType.Role]: fieldValidationError,
 };
+
+export const existingUser = (users: User.Details[], email: string) =>
+  users.find(user => user.email.toLowerCase() === email.toLowerCase());
+
+export const errorMessage = (email: string) =>
+  `A user with the email "${email.toLowerCase()}" already exists. Please review it and consider using a different email.`;
