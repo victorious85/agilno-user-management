@@ -1,14 +1,15 @@
-import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import React, { memo } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+// Assets
+import Arrow from '../../../../shared/assets/icons/right-arrow.svg';
 // Styles
-import Styles from './list-item.styles.ts';
+import styles from './list-item.styles.ts';
 
 interface PropsT {
   name: string;
   email: string;
   role: string;
   onPress: () => void;
-  onLongPress: () => void;
 }
 
 /**
@@ -19,18 +20,17 @@ const ListItemComponent: React.FC<PropsT> = ({
   email,
   role,
   onPress,
-  onLongPress,
 }) => (
-  <TouchableOpacity
-    style={Styles.container}
-    onPress={onPress}
-    onLongPress={onLongPress}>
-    <View>
-      <Text style={Styles.name}>{name}</Text>
-      <Text style={Styles.email}>{email}</Text>
-      <Text style={Styles.role}>{role}</Text>
+  <TouchableOpacity style={styles.container} onPress={onPress}>
+    <View style={styles.infoContainer}>
+      <Text style={styles.name}>{name}</Text>
+      <Text>{email}</Text>
+      <Text>{role}</Text>
+    </View>
+    <View style={styles.iconContainer}>
+      <Arrow width={24} height={24} />
     </View>
   </TouchableOpacity>
 );
 
-export default ListItemComponent;
+export default memo(ListItemComponent);

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Details Screen renders correctly 1`] = `
+<Memo(SafeAreaComponent)>
+  <View
+    style={
+      {
+        "flex": 1,
+        "padding": 10,
+      }
+    }
+  >
+    <Memo(ProfileComponent)
+      openForm={[Function]}
+      user={
+        {
+          "email": "test@gmail.com",
+          "id": "1",
+          "name": "test",
+          "role": "test",
+        }
+      }
+    />
+  </View>
+</Memo(SafeAreaComponent)>
+`;

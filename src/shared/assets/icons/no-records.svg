@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="358px" height="225.050228px" viewBox="0 0 358 225.050228" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>No_Records</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E7F7FF" offset="0%"></stop>
+            <stop stop-color="#E8F8FF" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-3.6%" y="-73.4%" width="107.1%" height="246.8%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.6%" y="-73.4%" width="107.1%" height="246.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Alerts-List-View-1-Copy-8" transform="translate(-16, -234)">
+            <g id="No_Records" transform="translate(16, 234)">
+                <path d="M251.318351,97.2648402 C249.575766,81.40322 236.211839,69.06621 219.984344,69.06621 C212.577411,69.06621 205.767076,71.6365102 200.386165,75.9390763 C194.301302,55.6459716 175.580058,40.8675799 153.428571,40.8675799 C126.343921,40.8675799 104.387476,62.9612531 104.387476,90.2151826 C104.387476,92.8643812 104.594935,95.4648222 104.994397,98.0009534 C92.6021169,100.91357 83.369863,112.126106 83.369863,125.46347 C83.369863,141.037144 95.9392378,153.6621 111.3712,153.6621 L251.532909,153.6621 C266.997621,153.6621 279.534247,141.005454 279.534247,125.46347 C279.534247,109.889797 266.964871,97.2648402 251.532909,97.2648402 L251.318351,97.2648402 Z" id="Rectangle-1-copy-2-path" stroke-opacity="0.5" stroke="#C3EEFF" stroke-width="2" fill="url(#linearGradient-1)" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M237.94676,100.534247 L237.75187,100.534247 M212.511416,75.196347 C206.017256,75.196347 200.046174,77.5803936 195.328366,81.5711795 C189.993354,62.7485896 173.579172,49.0410959 154.157465,49.0410959 C130.410519,49.0410959 111.159817,69.5337783 111.159817,94.8127854" id="Shape" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <ellipse id="Oval" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="257.465753" cy="86.6392694" rx="8.89470857" ry="8.99086758"></ellipse>
+                <ellipse id="Oval-Copy-3" fill="#FFFFFF" cx="237.897395" cy="79.4465753" rx="3.55788343" ry="3.59634703"></ellipse>
+                <ellipse id="Oval-Copy-4" fill="#FFFFFF" cx="277.034112" cy="93.8319635" rx="3.55788343" ry="3.59634703"></ellipse>
+                <path d="M109.159817,86.6392694 L64.1187215,86.6392694 C63.014152,86.6392694 62.1187215,87.5346999 62.1187215,88.6392694 L62.1187215,116.025571 C62.1187215,117.13014 63.014152,118.025571 64.1187215,118.025571 L73.7037919,118.025571 L73.7037919,118.025571 L73.7037919,125.872146 L81.6640858,118.025571 L109.159817,118.025571 C110.264387,118.025571 111.159817,117.13014 111.159817,116.025571 L111.159817,88.6392694 C111.159817,87.5346999 110.264387,86.6392694 109.159817,86.6392694 Z" id="Path" fill="#890A4D"></path>
+                <path d="M98.9100763,92.6974815 C99.4912927,92.1162651 100.433631,92.1162652 101.014847,92.6974815 C101.596063,93.2786979 101.596063,94.2210358 101.014847,94.8022522 L94.3497399,101.467359 L91.543379,102.16895 L92.2449692,99.3625886 L98.9100763,92.6974815 Z" id="Path" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M279.16895,70.2922374 L234.127854,70.2922374 C233.023284,70.2922374 232.127854,71.1876679 232.127854,72.2922374 L232.127854,99.6785388 C232.127854,100.783108 233.023284,101.678539 234.127854,101.678539 L243.712924,101.678539 L243.712924,101.678539 L243.712924,109.525114 L251.673218,101.678539 L279.16895,101.678539 C280.273519,101.678539 281.16895,100.783108 281.16895,99.6785388 L281.16895,72.2922374 C281.16895,71.1876679 280.273519,70.2922374 279.16895,70.2922374 Z" id="Path" fill="#C08C03" transform="translate(256.6484, 89.9087) scale(-1, 1) translate(-256.6484, -89.9087)"></path>
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="2.333333" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" cx="257.193303" cy="86.0943683" r="1.08980213"></circle>
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="2.333333" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" cx="266.456621" cy="86.0943683" r="1.08980213"></circle>
+                <circle id="Oval" stroke="#FFFFFF" stroke-width="2.333333" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" cx="247.929985" cy="86.0943683" r="1.08980213"></circle>
+                <line x1="73.5616438" y1="98.4908676" x2="85.0045662" y2="98.4908676" id="Path-Copy" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="73.5616438" y1="106.664384" x2="100.534247" y2="106.664384" id="Path" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></line>
+                <circle id="Oval" fill="#C08C03" cx="5.72146119" cy="131.593607" r="5.72146119"></circle>
+                <ellipse id="Oval" fill-opacity="0.5" fill="#E2E2E2" filter="url(#filter-2)" cx="177.365297" cy="214.96347" rx="84.1872146" ry="4.08675799"></ellipse>
+                <ellipse id="Oval" fill-opacity="0.5" fill="#E2E2E2" filter="url(#filter-3)" cx="177.365297" cy="214.96347" rx="84.1872146" ry="4.08675799"></ellipse>
+                <polygon id="Path-10" fill="#4B7B8B" opacity="0.534319196" points="75.196347 16.347032 78.4657534 0 60.4840183 6.53881279"></polygon>
+                <polygon id="Path-11" fill="#BE1E2D" points="336.748858 138.949772 341.302674 117.69863 358 132.410959"></polygon>
+                <circle id="Oval" fill="#BABFC2" cx="270.543379" cy="23.7031963" r="5.72146119"></circle>
+                <path d="M158.931507,114.429224 L215.415525,114.429224 C216.520095,114.429224 217.415525,115.324654 217.415525,116.429224 L217.415525,174.817352 C217.415525,177.578775 215.176949,179.817352 212.415525,179.817352 L156.931507,179.817352 L156.931507,179.817352 L156.931507,116.429224 C156.931507,115.324654 157.826937,114.429224 158.931507,114.429224 Z" id="Rectangle" stroke="#1D3A46" stroke-width="1.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect id="Rectangle" fill="#BBBFC3" x="166.739726" y="142.219178" width="16.347032" height="9.80821918"></rect>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="171.643836 148.757991 172.733638 146.578387 174.368341 147.668189 176.003044 145.488584 178.182648 148.757991"></polygon>
+                <rect id="Rectangle-Copy-3" fill="#D0D2D5" x="186.356164" y="142.219178" width="21.2511416" height="3.26940639"></rect>
+                <rect id="Rectangle-Copy-4" fill="#D0D2D5" x="186.356164" y="148.757991" width="19.6164384" height="2.45205479"></rect>
+                <rect id="Rectangle-Copy" fill="#BBBFC3" x="166.739726" y="158.56621" width="16.347032" height="9.80821918"></rect>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="171.643836 165.105023 172.733638 162.925419 174.368341 164.015221 176.003044 161.835616 178.182648 165.105023"></polygon>
+                <rect id="Rectangle-Copy-6" fill="#D0D2D5" x="186.356164" y="158.56621" width="21.2511416" height="3.26940639"></rect>
+                <rect id="Rectangle-Copy-5" fill="#D0D2D5" x="186.356164" y="165.105023" width="19.6164384" height="2.45205479"></rect>
+                <rect id="Rectangle" fill="#165C7D" x="166.739726" y="125.872146" width="40.8675799" height="11.4429224"></rect>
+                <path d="M145.488584,150.392694 L156.931507,150.392694 L156.931507,179.817352 L150.488584,179.817352 C147.727161,179.817352 145.488584,177.578775 145.488584,174.817352 L145.488584,150.392694 L145.488584,150.392694 Z" id="Rectangle" stroke="#1D3A46" stroke-width="1.5" fill="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

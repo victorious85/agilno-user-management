@@ -1,10 +1,14 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const Styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    paddingVertical: 10,
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    paddingTop: 6,
+    gap: 12,
+    paddingHorizontal: 10,
   },
 });
-
-export default Styles;

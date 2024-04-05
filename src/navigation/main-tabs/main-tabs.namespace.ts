@@ -1,8 +1,8 @@
 //Namespace
-import {Routes} from '../navigation.namespace';
+import { Routes } from '../navigation.namespace';
 //Screen Options
-import {useSettingsOptions} from '../../modules/settings';
-import {useUserStackOptions} from '../user-stack';
+import { useSettingsOptions } from '../../modules/settings';
+import { useUserStackOptions } from '../user-stack';
 
 /* ====================================
  *    🔰 MAIN TABS SCREEN ROUTES

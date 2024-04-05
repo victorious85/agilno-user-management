@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {ViewStyle} from 'react-native';
-import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
-import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
-import {MaterialTopTabNavigationOptions} from '@react-navigation/material-top-tabs';
+import { ViewStyle } from 'react-native';
+import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
+import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
+import { MaterialTopTabNavigationOptions } from '@react-navigation/material-top-tabs';
 
 declare global {
   namespace RouteStack {

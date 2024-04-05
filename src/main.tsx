@@ -1,7 +1,7 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 // Screens
-import {TabNavigator} from './navigation/main-tabs';
+import { TabNavigator } from './navigation/main-tabs';
 
 /**
  * 🔸 Main Project Entry

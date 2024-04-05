@@ -1,5 +1,5 @@
 // Namespace
-import {Routes} from '../../navigation';
+import { Routes } from '../../navigation';
 
 declare global {
   namespace SettingsRouting {

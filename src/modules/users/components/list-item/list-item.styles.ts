@@ -1,25 +1,25 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
+// Styles
+import { palettes } from '../../../../shared/styles/palettes';
 
-const Styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
+    flex: 1,
+    flexDirection: 'row',
     padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
+    borderRadius: 8,
+    backgroundColor: palettes.primary.getMainVariation(0),
+    marginHorizontal: 10,
+  },
+  infoContainer: {
+    flex: 1,
+    gap: 4,
+  },
+  iconContainer: {
+    justifyContent: 'center',
   },
   name: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 4,
-  },
-  email: {
-    fontSize: 14,
-    color: '#555',
-    marginBottom: 4,
-  },
-  role: {
-    fontSize: 12,
-    color: '#888',
   },
 });
-
-export default Styles;

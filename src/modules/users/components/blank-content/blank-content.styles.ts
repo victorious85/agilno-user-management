@@ -1,6 +1,6 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const Styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
@@ -9,15 +9,11 @@ const Styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 30,
+    paddingVertical: 20,
     textAlign: 'center',
   },
   subtitle: {
     fontSize: 16,
-    marginBottom: 15,
-    color: '#555',
     textAlign: 'center',
   },
 });
-
-export default Styles;

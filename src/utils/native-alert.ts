@@ -1,4 +1,4 @@
-import {Alert, AlertOptions} from 'react-native';
+import { Alert, AlertOptions } from 'react-native';
 
 /**
  * Error Alert
@@ -15,7 +15,7 @@ export const showErrorAlert = (params: AppAlert) =>
   Alert.alert(
     params.title,
     params.message,
-    [{onPress: params?.onPress}],
+    [{ onPress: params?.onPress }],
     params.options,
   );
 
@@ -66,6 +66,6 @@ export const showConfirmAlert = (params: PromptAlert) => {
         style: buttonStyle || 'destructive',
       },
     ],
-    {cancelable: false},
+    { cancelable: false },
   );
 };

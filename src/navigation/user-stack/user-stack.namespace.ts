@@ -1,8 +1,8 @@
 // Namespace
-import {Routes} from '../navigation.namespace.ts';
+import { Routes } from '../navigation.namespace.ts';
 // Screen Options
-import {useUserDetailsScreenOptions} from '../../modules/userDetails';
-import {useUsersScreenOptions} from '../../modules/users';
+import { useUserDetailsScreenOptions } from '../../modules/user-details';
+import { useUsersScreenOptions } from '../../modules/users';
 
 /* ====================================
  *      🔰 USER STACK ROUTES

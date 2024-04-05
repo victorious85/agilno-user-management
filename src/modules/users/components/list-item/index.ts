@@ -1,1 +1,1 @@
-export {default as ListItem} from './list-item.component.tsx';
+export { default as ListItem } from './list-item.component.tsx';

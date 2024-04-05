@@ -1,6 +1,6 @@
-import {NavigatorScreenParams} from '@react-navigation/native-stack';
+import { NavigatorScreenParams } from '@react-navigation/native-stack';
 //Namespace
-import {Routes} from '../navigation.namespace';
+import { Routes } from '../navigation.namespace';
 
 declare global {
   namespace MainTabsRouting {

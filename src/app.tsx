@@ -1,7 +1,7 @@
 import React from 'react';
 import 'react-native-get-random-values';
 // Components
-import {AppProviders} from './providers/app-providers';
+import { AppProviders } from './providers/app-providers';
 // Main
 import Main from './main';
 

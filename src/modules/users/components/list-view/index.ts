@@ -1,1 +1,1 @@
-export {default as ListView} from './list-view.tsx';
+export { default as ListView } from './list-view.tsx';
