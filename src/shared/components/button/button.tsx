@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import { Text, TouchableOpacity } from 'react-native';
+import { SvgProps } from 'react-native-svg';
 // Styles
 import styles from './button.styles.ts';
-import { SvgProps } from 'react-native-svg';
 
 interface PropsT {
   title?: string;

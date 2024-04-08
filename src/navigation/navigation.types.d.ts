@@ -2,7 +2,6 @@
 import { ViewStyle } from 'react-native';
 import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
-import { MaterialTopTabNavigationOptions } from '@react-navigation/material-top-tabs';
 
 declare global {
   namespace RouteStack {
@@ -15,10 +14,6 @@ declare global {
       headerStyle?: ViewStyle;
     }
 
-    interface TopTabOptions extends MaterialTopTabNavigationOptions {
-      headerStyle?: ViewStyle;
-    }
-
     interface ScreenConfigs {
       component: React.FC<any>;
       options?: Options;
@@ -28,10 +23,6 @@ declare global {
       options?: BottomTabOptions;
     }
 
-    interface TopTabConfigs extends ScreenConfigs {
-      options?: TopTabOptions;
-    }
-
     type ScreenRoutes<ParamList> = Record<
       keyof ParamList | string,
       ScreenConfigs
@@ -39,10 +30,6 @@ declare global {
     type BottomTabScreenRoutes<ParamList> = Record<
       keyof ParamList | string,
       BottomTabScreenConfigs
-    >;
-    type TopTabScreenRoutes<ParamList> = Record<
-      keyof ParamList | string,
-      TopTabConfigs
     >;
   }
 }

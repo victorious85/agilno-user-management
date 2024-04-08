@@ -1,1 +1,1 @@
-export { default as RowItem } from './profile.component.tsx';
+export { default as RowItem } from './row-item.tsx';

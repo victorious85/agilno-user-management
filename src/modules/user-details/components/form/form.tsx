@@ -1,7 +1,7 @@
 import React from 'react';
 import { KeyboardAvoidingView, View } from 'react-native';
 // Utils
-import { isIos } from '../../../../utils/platform.utils.ts';
+import { isIos } from '../../../../utils';
 import { useForm } from './useform.hook.ts';
 // Constants
 import {
@@ -21,12 +21,13 @@ import styles from './form.styles.ts';
 
 interface PropsT {
   user: User.Details;
+  closeForm: () => void;
 }
 
 /**
  * 🔸 Form Component
  */
-const FormComponent: React.FC<PropsT> = ({ user }) => {
+const FormComponent: React.FC<PropsT> = ({ user, closeForm }) => {
   const {
     onSave,
     onAddUser,
@@ -34,12 +35,13 @@ const FormComponent: React.FC<PropsT> = ({ user }) => {
     editedUserRef,
     errors,
     onChangeField,
-  } = useForm(user);
+    keyboardVerticalOffset,
+  } = useForm(user, closeForm);
 
   return (
     <KeyboardAvoidingView
       behavior={isIos ? 'padding' : 'height'}
-      keyboardVerticalOffset={85}
+      keyboardVerticalOffset={keyboardVerticalOffset}
       style={styles.container}>
       <View>
         {FormFields.map(field => (

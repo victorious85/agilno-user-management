@@ -11,11 +11,8 @@ import { SafeArea } from '../../shared/components/safe-area';
 import { useAppDispatch, useAppSelector } from '../../store/store.hooks.ts';
 import { setSearchBy } from '../../store/slices/settings.slices.ts';
 // Constants
-import { TITLE } from './setings.constants.ts';
-import {
-  FieldType,
-  FormFields,
-} from '../user-details/components/form/form.constants.ts';
+import { SettingsFields, TITLE } from './setings.constants.ts';
+import { FieldType } from '../user-details/components/form/form.constants.ts';
 // Styles
 import styles from './settings.styles.ts';
 
@@ -40,7 +37,7 @@ const SettingsScreen: React.FC<PropsT> = () => {
   return (
     <SafeArea>
       <View style={styles.container}>
-        {FormFields.map(field => (
+        {SettingsFields.map(field => (
           <View key={field} style={styles.row}>
             <Text style={styles.label}>{`Search by ${field}`}</Text>
             <Switch

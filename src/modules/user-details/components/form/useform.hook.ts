@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigation } from '@react-navigation/native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 // Utils
 import {
   useAppDispatch,
@@ -25,14 +26,19 @@ interface UseFormResult {
   isExistedUser: boolean;
   onSave: () => void;
   onAddUser: () => void;
+  keyboardVerticalOffset: number;
 }
 
-export const useForm = (user: User.Details): UseFormResult => {
+export const useForm = (
+  user: User.Details,
+  closeForm: () => void,
+): UseFormResult => {
   const { goBack } = useNavigation<StackRouting.NavigationProp>();
-  const { users } = useAppSelector(state => state.users);
+  const { data: users } = useAppSelector(state => state.users);
   const dispatch = useAppDispatch(); // Get the dispatch function from react-redux
   const [errors, setErrors] = useState<FormErrors>({});
   const editedUserRef = useRef<User.Details>(user);
+  const { bottom } = useSafeAreaInsets();
 
   const isFormValueValid = useCallback(
     (type: FieldType, value: string) => {
@@ -83,8 +89,8 @@ export const useForm = (user: User.Details): UseFormResult => {
       return;
     }
     dispatch(updateUser(editedUserRef.current));
-    goBack();
-  }, [dispatch, goBack, isFormValid]);
+    closeForm();
+  }, [dispatch, isFormValid]);
 
   const handleChange = useCallback(
     (type: FieldType, value: string) => {
@@ -106,5 +112,6 @@ export const useForm = (user: User.Details): UseFormResult => {
     onChangeField: handleChange,
     onSave: handleSave,
     onAddUser: handleAddUser,
+    keyboardVerticalOffset: bottom ? 110 : 75,
   };
 };

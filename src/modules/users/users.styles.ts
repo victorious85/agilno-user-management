@@ -7,7 +7,7 @@ export default StyleSheet.create({
   },
   searchContainer: {
     flexDirection: 'row',
-    paddingTop: 6,
+    paddingBottom: 12,
     gap: 12,
     paddingHorizontal: 10,
   },

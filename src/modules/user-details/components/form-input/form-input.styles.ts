@@ -4,7 +4,7 @@ import { palettes } from '../../../../shared/styles/palettes';
 
 export default StyleSheet.create({
   container: {
-    height: 75,
+    height: 80,
   },
   input: {
     height: 50,
@@ -13,10 +13,18 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: palettes.primary.main,
     paddingHorizontal: 10,
+    zIndex: 1,
   },
   inputError: {
     color: palettes.error.main,
-    paddingTop: 5,
+    paddingTop: 3,
+  },
+  inputLabel: {
+    position: 'absolute',
+    backgroundColor: palettes.getAdditionalColor(1),
+    top: -8,
+    left: 12,
+    zIndex: 2,
   },
   errorBorder: {
     borderColor: palettes.error.main,

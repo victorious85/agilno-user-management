@@ -18,7 +18,11 @@ interface PropsT {
  * 🔸 List View Component
  */
 
-const ListView: React.FC<PropsT> = ({ users, onItemPress, onActionPress }) => {
+const ListViewComponent: React.FC<PropsT> = ({
+  users,
+  onItemPress,
+  onActionPress,
+}) => {
   const openedRow = useRef<Swipeable>();
   const isFocused = useIsFocused();
 
@@ -66,11 +70,11 @@ const ListView: React.FC<PropsT> = ({ users, onItemPress, onActionPress }) => {
       getItemLayout={getItemLayout}
       onEndReachedThreshold={1}
       ItemSeparatorComponent={() => <View style={styles.separator} />}
-      initialNumToRender={5} // Render first 5 items initially
-      maxToRenderPerBatch={5} // Render up to 5 items per batch
-      windowSize={5} // Maintain 5 items in memory at a time
+      initialNumToRender={7}
+      maxToRenderPerBatch={5}
+      windowSize={5}
     />
   );
 };
 
-export default ListView;
+export default ListViewComponent;

@@ -31,6 +31,6 @@ export const palettes: Palettes.Pattern = {
     contrastText: '#ffffff', // White
     main: '#C08C03', // Sunshine
   },
-  getAdditionalColor: (factor: number) => ['#0000FF'][factor],
+  getAdditionalColor: (factor: number) => ['#0000FF', '#f2f2f2'][factor],
   sequenceColor: (factor: number) => ['#165c7d'][factor],
 };

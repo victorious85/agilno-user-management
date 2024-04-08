@@ -1,1 +1,1 @@
-export { default as FormInput } from './form-input.component.tsx';
+export { default as FormInput } from './form-input.tsx';

@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Delete from '../../../../shared/assets/icons/delete.svg';
 // Styles
 import styles from './list-action-item.styles.ts';
+import { palettes } from '../../../../shared/styles/palettes';
 
 interface PropsT {
   id: string;
@@ -17,7 +18,7 @@ interface PropsT {
 const ListActionItemComponent: React.FC<PropsT> = ({ id, onPress }) => {
   return (
     <TouchableOpacity onPress={() => onPress(id)} style={styles.container}>
-      <Delete fill={'red'} />
+      <Delete fill={palettes.error.main} />
     </TouchableOpacity>
   );
 };

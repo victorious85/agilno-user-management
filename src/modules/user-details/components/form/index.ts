@@ -1,1 +1,1 @@
-export { default as Form } from './form.component.tsx';
+export { default as Form } from './form.tsx';

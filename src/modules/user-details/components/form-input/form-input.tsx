@@ -25,6 +25,7 @@ const FormInputComponent: React.FC<PropsT> = ({
 }) => {
   return (
     <View style={styles.container}>
+      <Text style={styles.inputLabel}>{placeholder}</Text>
       <TextInput
         style={[styles.input, Boolean(error) && styles.errorBorder]}
         autoCorrect={false}

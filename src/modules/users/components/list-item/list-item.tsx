@@ -23,9 +23,11 @@ const ListItemComponent: React.FC<PropsT> = ({
 }) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
     <View style={styles.infoContainer}>
-      <Text style={styles.name}>{name}</Text>
-      <Text>{email}</Text>
-      <Text>{role}</Text>
+      <Text style={styles.name} numberOfLines={1}>
+        {name}
+      </Text>
+      <Text numberOfLines={1}>{email}</Text>
+      <Text numberOfLines={1}>{role}</Text>
     </View>
     <View style={styles.iconContainer}>
       <Arrow width={24} height={24} />

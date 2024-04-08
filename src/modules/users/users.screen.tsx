@@ -6,6 +6,7 @@ import { Routes } from '../../navigation';
 import { SafeArea } from '../../shared/components/safe-area';
 import { BlankContent, ListView, Search } from './components';
 import { Button } from '../../shared/components/button';
+import { Loader } from '../../shared/components/loader';
 // Hooks
 import useUsers from './users.hook.ts';
 // Constants
@@ -32,6 +33,7 @@ const UsersScreen: React.FC<PropsT> = () => {
     updateSearchKey,
     onPressAddUser,
     isShowBlankContent,
+    isLoading,
   } = useUsers();
 
   return (
@@ -41,6 +43,7 @@ const UsersScreen: React.FC<PropsT> = () => {
           <Search onChangeText={updateSearchKey} />
           <Button icon={UserPlus} title={''} onPress={onPressAddUser} />
         </View>
+        {isLoading && <Loader />}
         {isShowBlankContent ? (
           <BlankContent
             title={BLANK_CONTENT_TITLE}

@@ -1,5 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import settingsReducer, { setSearchBy } from './settings.slices';
+// Namespace
 import { FieldType } from '../../modules/user-details/components/form/form.constants.ts';
 
 describe('settings slice', () => {

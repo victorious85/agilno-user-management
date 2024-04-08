@@ -6,7 +6,7 @@ interface SettingsState {
 }
 
 const initialState: SettingsState = {
-  searchBy: FieldType.Name, // Set the initial search by field to name
+  searchBy: FieldType.Name,
 };
 
 const settingsSlices = createSlice({

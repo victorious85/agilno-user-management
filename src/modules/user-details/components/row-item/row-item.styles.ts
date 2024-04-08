@@ -1,4 +1,6 @@
 import { StyleSheet } from 'react-native';
+//cStyles
+import { palettes } from '../../../../shared/styles/palettes';
 
 export default StyleSheet.create({
   container: {
@@ -8,12 +10,14 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 15,
-  },
-  iconContainer: {
-    paddingRight: 10,
+    flexWrap: 'wrap',
+    gap: 10,
   },
   text: {
-    fontSize: 28,
-    // fontWeight: 'bold',
+    flex: 1,
+    fontSize: 24,
+  },
+  email: {
+    color: palettes.getAdditionalColor(0),
   },
 });

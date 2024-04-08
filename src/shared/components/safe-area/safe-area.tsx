@@ -11,8 +11,8 @@ interface PropsT {
 /**
  * 🔸 Safe Area Component
  */
-const SafeAreaComponent: React.FC<PropsT> = ({ children }) => (
-  <SafeAreaView style={styles.container}>{children}</SafeAreaView>
+const SafeAreaComponent: React.FC<PropsT> = ({ children, style }) => (
+  <SafeAreaView style={[styles.container, style]}>{children}</SafeAreaView>
 );
 
 export default memo(SafeAreaComponent);

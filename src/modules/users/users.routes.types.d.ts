@@ -12,7 +12,7 @@ declare global {
     type ParamList = {
       [Routes.Users]: undefined;
       [Routes.UserDetails]: {
-        user: User.Details;
+        userId: string;
       };
     };
   }

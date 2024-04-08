@@ -1,26 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`User Details Screen renders correctly 1`] = `
-<Memo(SafeAreaComponent)>
-  <View
-    style={
-      {
-        "flex": 1,
-        "padding": 10,
-      }
+<View
+  style={
+    {
+      "flex": 1,
     }
-  >
-    <Memo(ProfileComponent)
-      openForm={[Function]}
-      user={
+  }
+>
+  <RNCSafeAreaProvider
+    onInsetsChange={[Function]}
+    style={
+      [
         {
-          "email": "test@gmail.com",
-          "id": "1",
-          "name": "test",
-          "role": "test",
-        }
-      }
-    />
-  </View>
-</Memo(SafeAreaComponent)>
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
 `;

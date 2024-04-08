@@ -12,7 +12,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: palettes.primary.main,
-    marginBottom: 16,
     gap: 10,
   },
   title: {

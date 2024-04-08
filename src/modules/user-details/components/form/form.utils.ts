@@ -26,10 +26,11 @@ export const validators = {
   [FieldType.Name]: fieldValidationError,
   [FieldType.Email]: emailValidationError,
   [FieldType.Role]: fieldValidationError,
+  [FieldType.Company]: () => {},
 };
 
 export const existingUser = (users: User.Details[], email: string) =>
-  users.find(user => user.email.toLowerCase() === email.toLowerCase());
+  users?.find(user => user.email.toLowerCase() === email.toLowerCase());
 
 export const errorMessage = (email: string) =>
   `A user with the email "${email.toLowerCase()}" already exists. Please review it and consider using a different email.`;

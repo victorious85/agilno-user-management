@@ -1,5 +1,5 @@
 // Utils
-import { getTreeWithProviders } from '../../utils/test-helper.utils';
+import { getTreeWithProviders } from '../../utils';
 // Components
 import { Settings } from './index';
 

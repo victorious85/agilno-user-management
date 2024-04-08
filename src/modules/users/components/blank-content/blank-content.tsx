@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
 // Assets
 import NoRecords from '../../../../shared/assets/icons/no-records.svg';
@@ -23,4 +23,4 @@ const BlankContentComponent: React.FC<PropsT> = ({ title, subtitle }) => {
   );
 };
 
-export default memo(BlankContentComponent);
+export default BlankContentComponent;

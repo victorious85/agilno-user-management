@@ -9,7 +9,6 @@ declare global {
    * --- 🔸 STACK ---
    */
   namespace StackRouting {
-    // Authorized Screens param lists
     type StackParamList = UsersRouting.ParamList;
 
     type ParamList = MainTabsRouting.TabParamList & StackParamList;

@@ -1,1 +1,1 @@
-export { default as Profile } from './profile.component.tsx';
+export { default as Profile } from './profile.tsx';

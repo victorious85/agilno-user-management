@@ -2,13 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import usersReducer, {
   addUser,
   deleteUser,
-  setUsers,
   updateUser,
+  fetchUsers,
 } from './users.slices.ts';
 
 const initialState = {
   users: {
-    users: [
+    data: [
       {
         id: '1',
         name: 'John Doe',
@@ -22,6 +22,8 @@ const initialState = {
         role: 'Designer',
       },
     ],
+    loading: false,
+    error: null,
   },
 };
 
@@ -41,27 +43,6 @@ describe('users slice', () => {
     expect(store.getState().users).toEqual(initialState.users);
   });
 
-  test('setUsers action adds users to the state', () => {
-    const users = [
-      {
-        id: '3',
-        name: 'New User 3',
-        email: 'user1@example.com',
-        role: 'Developer',
-      },
-      {
-        id: '4',
-        name: 'New User 4',
-        email: 'user2@example.com',
-        role: 'Designer',
-      },
-    ];
-
-    store.dispatch(setUsers(users));
-
-    expect(store.getState().users.users).toEqual(users);
-  });
-
   test('addUser action adds a user to the state', () => {
     const user = {
       id: '3',
@@ -72,7 +53,7 @@ describe('users slice', () => {
 
     store.dispatch(addUser(user));
 
-    expect(store.getState().users.users).toContainEqual(user);
+    expect(store.getState().users.data).toContainEqual(user);
   });
 
   test('updateUser action updates a user in the state', () => {
@@ -85,7 +66,7 @@ describe('users slice', () => {
 
     store.dispatch(updateUser(updatedUser));
 
-    expect(store.getState().users.users).toContainEqual(updatedUser);
+    expect(store.getState().users.data).toContainEqual(updatedUser);
   });
 
   test('deleteUser action removes a user from the state', () => {
@@ -94,7 +75,14 @@ describe('users slice', () => {
     store.dispatch(deleteUser(userIdToDelete));
 
     expect(
-      store.getState().users.users.some(user => user.id === userIdToDelete),
+      store.getState().users.data.some(user => user.id === userIdToDelete),
     ).toBe(false);
+  });
+
+  test('fetchUsers thunk adds users to the state', async () => {
+    await store.dispatch(fetchUsers());
+    expect(store.getState().users.loading).toBe(false);
+    expect(store.getState().users.error).toBe(null);
+    expect(store.getState().users.data.length).toBeGreaterThan(0);
   });
 });

@@ -21,7 +21,6 @@ export const showErrorAlert = (params: AppAlert) =>
 
 /**
  * Prompt Alert
- * Allow only one on screen
  */
 
 interface PromptAlert {

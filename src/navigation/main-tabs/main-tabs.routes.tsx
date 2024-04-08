@@ -2,6 +2,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Utils
 import { useTabBarHeight } from './main-tabs.utils.ts';
+import { isAndroid } from '../../utils';
 // Screens
 import { useMainTabsRoutes } from './main-tabs.namespace.ts';
 // Styles
@@ -31,6 +32,7 @@ const MainTabNavigator: React.FC = () => {
         },
         tabBarActiveTintColor: palettes.primary.main,
         headerTitleStyle: { color: palettes.primary.main },
+        tabBarHideOnKeyboard: isAndroid,
       }}>
       {Object.entries(routes).map(
         ([screenName, { component, options = {} }]) => (
